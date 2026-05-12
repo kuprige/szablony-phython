@@ -2,12 +2,17 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Witaj na mojej stronie domowej</title>
+    <title>Moja wizytówka</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <h1>Witaj na mojej stronie domowej</h1>
+
+<nav>
+    <a href="/mypage/me">O mnie</a> |
+    <a href="/mypage/contact">Kontakt</a>
+</nav>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Einstein">
 

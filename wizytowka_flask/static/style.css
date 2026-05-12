@@ -1,7 +1,14 @@
 body {
     background-color: lightgray;
+    font-family: Arial, sans-serif;
+    margin: 40px;
 }
 
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
 h1, h2 {
     color: navy;
 }
@@ -13,4 +20,9 @@ img {
 input[type="submit"] {
     background-color: navy;
     color: white;
+}
+.feedback {
+    font-weight: bold;
+    color: green;
+    margin-bottom: 10px;
 }

@@ -8,10 +8,18 @@ def me():
 
 @app.route('/mypage/contact', methods=['GET', 'POST'])
 def contact():
+    feedback = None
+
     if request.method == 'POST':
         message = request.form.get('message')
-        print(f"Otrzymano wiadomość: {message}")
-    return render_template('contact.html')
+
+        if not message or message.strip() == "":
+            feedback = "Wiadomość nie może być pusta."
+        else:
+            print(f"Otrzymano wiadomość: {message}")
+            feedback = "Dziękuję! Twoja wiadomość została wysłana."
+
+    return render_template('contact.html', feedback=feedback)
 
 if __name__ == '__main__':
     app.run(debug=True)
